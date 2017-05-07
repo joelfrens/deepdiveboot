@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>DeepDive</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!--- CSS Files here-->
+	<link rel="stylesheet" href="../assets/build/css/app.css">
+
+	<!--- JS Files here-->
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+	<script src="../assets/build/js/app_head.min.js"></script>
+</head>
+
+<body>
+<div class="page-wrapper">
+	<!-- Page header -->
+	<div class="page-header">
+
+		<!-- Nav top bar -->
+		<div class="nav-top-wrapper">
+			<div class="nav-top-left">
+				<i class="fa fa-envira logo-img" aria-hidden="true"></i>
+			</div>
+			<div class="nav-top-right">
+				<div class="dropdown">
+					<a class="btn dropdown-toggle user-drop-link" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						<i class="fa fa-user btn dropdown-toggle user-drop-icon" aria-hidden="true"></i>
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu nav-top-drop" aria-labelledby="dropdownMenu1">
+						<li><a href="#">Settings</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Nav top bar -->
+
+		<!-- Nav left bar -->
+		<div class="nav-left-wrapper nav-left-wrapper-thin">
+			<nav class="nav-left" id="theme-accordion">
+				<ul class="no-bullets">
+					<li class="nav-left-item">
+						<a class="no-link main-link accordion-link" href="#pages-block">
+							<span class="nav-left-icon inline-block">
+								<i class="fa fa-file page-icon" aria-hidden="true"></i>
+							</span>
+							<span class="inline-block nav-left-text">Pages</span>
+							<span class="inline-block nav-left-chevron-wrapper">
+								<i class="fa fa-chevron-right nav-chevron-right" aria-hidden="true"></i>
+							</span>
+						</a>
+						<ul id="pages-block" class="accordion-collapse">
+							<li class="nav-left-subitem">
+								<a class="no-link sub-link" href="/templates/add-page.html">
+									<span class="nav-left-icon inline-block">
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									</span>
+									<span class="inline-block nav-left-link">Add new</span>
+								</a>
+							</li>
+							<li class="nav-left-subitem">
+								<a class="no-link sub-link" href="/templates/pages.html">
+									<span class="nav-left-icon inline-block">
+										<i class="fa fa-list" aria-hidden="true"></i>
+									</span>
+									<span class="inline-block nav-left-link">List all</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-left-item">
+						<a class="no-link main-link accordion-link" href="#categories-block">
+							<span class="nav-left-icon inline-block">
+								<i class="fa fa-sitemap cat-icon" aria-hidden="true"></i>
+							</span>
+							<span class="inline-block nav-left-text">Categories</span>
+							<span class="inline-block nav-left-chevron-wrapper">
+								<i class="fa fa-chevron-right nav-chevron-right" aria-hidden="true"></i>
+							</span>
+						</a>
+						<ul id="categories-block" class="accordion-collapse">
+							<li class="nav-left-subitem">
+								<a class="no-link sub-link" href="/templates/add-category.html">
+									<span class="nav-left-icon inline-block">
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									</span>
+									<span class="inline-block nav-left-link">Add new</span>
+								</a>
+							</li>
+							<li class="nav-left-subitem">
+								<a class="no-link sub-link" href="/templates/categories.html">
+									<span class="nav-left-icon inline-block">
+										<i class="fa fa-list" aria-hidden="true"></i>
+									</span>
+									<span class="inline-block nav-left-link">List all</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-left-item">
+						<a class="no-link main-link accordion-link" href="#articles-block">
+							<span class="nav-left-icon inline-block">
+								<i class="fa fa-newspaper-o" aria-hidden="true"></i>
+							</span>
+							<span class="inline-block nav-left-text">Articles</span>
+							<span class="inline-block nav-left-chevron-wrapper">
+								<i class="fa fa-chevron-right nav-chevron-right" aria-hidden="true"></i>
+							</span>
+						</a>
+						<ul id="articles-block" class="accordion-collapse">
+							<li class="nav-left-subitem">
+								<a class="no-link sub-link" href="/templates/add-article.html">
+									<span class="nav-left-icon inline-block">
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									</span>
+									<span class="inline-block nav-left-link">Add new</span>
+								</a>
+							</li>
+							<li class="nav-left-subitem">
+								<a class="no-link sub-link" href="/templates/articles.html">
+									<span class="nav-left-icon inline-block">
+										<i class="fa fa-list" aria-hidden="true"></i>
+									</span>
+									<span class="inline-block nav-left-link">List All</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-left-item">
+						<a class="no-link main-link accordion-link" href="#tags-block">
+							<span class="nav-left-icon inline-block">
+								<i class="fa fa-tag" aria-hidden="true"></i>
+							</span>
+							<span class="inline-block nav-left-text">Tags</span>
+							<span class="inline-block nav-left-chevron-wrapper">
+								<i class="fa fa-chevron-right nav-chevron-right" aria-hidden="true"></i>
+							</span>
+						</a>
+						<ul id="tags-block" class="accordion-collapse">
+							<li class="nav-left-subitem">
+								<a class="no-link sub-link" href="/templates/add-tag.html">
+									<span class="nav-left-icon inline-block">
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									</span>
+									<span class="inline-block nav-left-link">Add new</span>
+								</a>
+							</li>
+							<li class="nav-left-subitem">
+								<a class="no-link sub-link" href="/templates/tags.html">
+									<span class="nav-left-icon inline-block">
+										<i class="fa fa-list" aria-hidden="true"></i>
+									</span>
+									<span class="inline-block nav-left-link">List All</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-left-item">
+						<a class="no-link main-link accordion-link" href="/templates/form.html">
+							<span class="nav-left-icon inline-block">
+								<i class="fa fa-th" aria-hidden="true"></i>
+							</span>
+							<span class="inline-block nav-left-text">Form Elements</span>
+							<span class="inline-block nav-left-chevron-wrapper">
+								<i class="fa fa-chevron-right nav-chevron-right" aria-hidden="true"></i>
+							</span>
+						</a>
+					</li>
+					<li class="nav-left-item">
+						<a class="no-link main-link accordion-link" href="/templates/login.html">
+							<span class="nav-left-icon inline-block">
+								<i class="fa fa-sign-in" aria-hidden="true"></i>
+							</span>
+							<span class="inline-block nav-left-text">Login Page</span>
+							<span class="inline-block nav-left-chevron-wrapper">
+								<i class="fa fa-chevron-right nav-chevron-right" aria-hidden="true"></i>
+							</span>
+						</a>
+					</li>
+					<li class="nav-left-item">
+						<a class="no-link main-link accordion-link" href="/templates/register.html">
+							<span class="nav-left-icon inline-block">
+								<i class="fa fa-plus" aria-hidden="true"></i>
+							</span>
+							<span class="inline-block nav-left-text">Registration Page</span>
+							<span class="inline-block nav-left-chevron-wrapper">
+								<i class="fa fa-chevron-right nav-chevron-right" aria-hidden="true"></i>
+							</span>
+						</a>
+					</li>
+					<li class="nav-left-item">
+						<a class="no-link main-link accordion-link" href="/templates/forgot-password.html">
+							<span class="nav-left-icon inline-block">
+								<i class="fa fa-key" aria-hidden="true"></i>
+							</span>
+							<span class="inline-block nav-left-text">Forgot Password</span>
+							<span class="inline-block nav-left-chevron-wrapper">
+								<i class="fa fa-chevron-right nav-chevron-right" aria-hidden="true"></i>
+							</span>
+						</a>
+					</li>
+					<li class="nav-left-item">
+						<a class="no-link main-link accordion-link" href="/templates/blank-page.html">
+							<span class="nav-left-icon inline-block">
+								<i class="fa fa-file-o" aria-hidden="true"></i>
+							</span>
+							<span class="inline-block nav-left-text">Blank Page</span>
+							<span class="inline-block nav-left-chevron-wrapper">
+								<i class="fa fa-chevron-right nav-chevron-right" aria-hidden="true"></i>
+							</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Nav left bar -->
+
+	</div>
+	<!-- Page header -->
+
+	<!-- Page content -->
+	<div class="page-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="breadcrumb">Dashboard</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="counter-box mg-rt-sm">
+						<h6 class="no-margin">Subscribers</h6>
+						<div class="count">5</div>	
+					</div>
+					<div class="counter-box mg-rt-sm">
+						<h6 class="no-margin">Total Visits</h6>
+						<div class="count">1100</div>	
+					</div>
+					<div class="counter-box mg-rt-sm">
+						<h6 class="no-margin">Users</h6>
+						<div class="count">20</div>	
+					</div>
+				</div>
+			</div>
+			<div class="row mg-tp-sm">
+				<div class="col-xs-12 col-md-4">
+					<div class="circular-box">
+						<canvas id="browserView" width="400" height="400"></canvas>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-5">
+					<div class="panel panel-default list-panel">
+					 	<div class="panel-heading list-head">
+					 		<div class="inner-head">
+					    		<h3 class="panel-title list-title">Comments</h3>
+					    	</div>
+					  	</div>
+					  	<div class="panel-body list-body">
+					    	<div class="list-row">
+					    		<span>afasf</span>
+					    		<div class="list-action-box">
+					    			<span class="inline-block pull-left mg-rt-xs">1 day ago</span>
+						    		<button type="button" class="btn btn-danger list-action-dec">
+						    			<i class="fa fa-times" aria-hidden="true"></i>
+						    		</button>
+						    		<button type="button" class="btn btn-info list-action-appr mg-rt-xs">
+						    			<i class="fa fa-check" aria-hidden="true"></i>
+						    		</button>
+					    		</div>
+					    	</div>
+					    	<div class="list-row">
+					    		<span>gsdg</span>
+					    		<div class="list-action-box">
+					    			<span class="inline-block pull-left mg-rt-xs">2 days ago</span>
+						    		<button type="button" class="btn btn-danger list-action-dec">
+						    			<i class="fa fa-times" aria-hidden="true"></i>
+						    		</button>
+						    		<button type="button" class="btn btn-info list-action-appr mg-rt-xs">
+						    			<i class="fa fa-check" aria-hidden="true"></i>
+						    		</button>
+					    		</div>
+					    	</div>
+					  	</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-3">
+					<div class="panel panel-default info-panel">
+					 	<div class="panel-heading info-head">
+					    	<h3 class="panel-title info-title">Users registered</h3>
+					  	</div>
+					  	<div class="panel-body info-body">
+					    	<div class="info-row">
+					    		<span class="info-col">Joel</span>
+					    		<span class="info-col">12/09/2016</span>
+					    	</div>
+					    	<div class="info-row">
+					    		<span class="info-col">Elita</span>
+					    		<span class="info-col">12/09/2016</span>
+					    	</div>
+					  	</div>
+					</div>
+					<div class="panel panel-default info-panel">
+					 	<div class="panel-heading info-head">
+					    	<h3 class="panel-title info-title">Top 10 articles</h3>
+					  	</div>
+					  	<div class="panel-body info-body">
+					    	<div class="info-row">
+					    		<span class="info-col">Our first article here...</span>
+					    	</div>
+					    	<div class="info-row">
+					    		<span class="info-col">When there is sunshine all over...</span>
+					    	</div>
+					    	<div class="info-row">
+					    		<span class="info-col">When there is sunshine all over...</span>
+					    	</div>
+					    	<div class="info-row">
+					    		<span class="info-col">When there is sunshine all over...</span>
+					    	</div>
+					    	<div class="info-row">
+					    		<span class="info-col">When there is sunshine all over...</span>
+					    	</div>
+					    	<div class="info-row">
+					    		<span class="info-col">When there is sunshine all over...</span>
+					    	</div>
+					    	<div class="info-row">
+					    		<span class="info-col">When there is sunshine all over...</span>
+					    	</div>
+					    	<div class="info-row">
+					    		<span class="info-col">When there is sunshine all over...</span>
+					    	</div>
+					    	<div class="info-row">
+					    		<span class="info-col">When there is sunshine all over...</span>
+					    	</div>
+					    	<div class="info-row">
+					    		<span class="info-col">When there is sunshine all over...</span>
+					    	</div>
+					  	</div>
+					</div>
+					<div class="panel panel-default info-panel">
+					 	<div class="panel-heading info-head">
+					    	<h3 class="panel-title info-title">Recent Subscriptions</h3>
+					  	</div>
+					  	<div class="panel-body info-body">
+					    	<div class="info-row">
+					    		<span class="info-col">joel@deepdive.com</span>
+					    	</div>
+					    	<div class="info-row">
+					    		<span class="info-col">joelfe@deepdive.com</span>
+					    	</div>
+					    	<div class="info-row">
+					    		<span class="info-col">james@deepdive.com</span>
+					    	</div>
+					  	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="software-info">
+			<span>Software v1.0</span>&nbsp;&#124;
+			<span><i class="fa fa-envelope" aria-hidden="true"></i> joelfrens@gmail.com</span>&nbsp;&#124;
+			<span><i class="fa fa-mobile" aria-hidden="true"></i> +447895632144&nbsp;</span>
+		</div>
+	</div>
+
+	<!-- Page footer -->
+	<div class="page-footer">
+
+	</div>
+</div>
+<script src="../assets/build/js/app_foot.min.js"></script>
+</body>
+</html>
